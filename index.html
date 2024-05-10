@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whatsApp</title>
+    <link rel="shortcut icon" href="logo/whatsapp.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="main mainOpen">
+        <div class="mainFrinds mainFrindsOpen">
+            <header>
+                <div class="icons">
+                    <!-- list -->
+                    <i class='bx bx-dots-vertical-rounded'></i>
+                    <!-- chat -->
+                    <i class='bx bx-message-alt-add'></i>
+                    <!-- ألخاله -->
+                    <i class='bx bx-shape-circle active'></i>
+                    <!-- group -->
+                    <i class='bx bx-group' ></i>
+                </div>
+                <div class="account">
+                    <img src="images/profile.jpg">
+                </div>
+            </header>
+            <div class="mainSearch">
+                <div class="search">
+                    <i class='bx bx-search' ></i>
+                    <input type="text" placeholder="بحث">
+                </div>
+                <i class='bx bx-filter filter' ></i>
+            </div>
+            <div class="archive">
+                <i class='bx bx-archive-in' ></i>
+                <p>دردشات مؤرشفه</p>
+            </div>
+            <div class="frinds">
+                <script>
+                    let names = ["kilwa" ,"youssef mohamed" , "hisoka" , "Dad" , "mom" , "sasa"];
+                    for (var i = 0; i < 6 ; i++){
+                        document.querySelector('.frinds').innerHTML += 
+                            `
+                                <div class="frindAccount">
+                                    <div class="Info">
+                                        <div class="img">
+                                            <img src="images/friend (${i}).jpg">
+                                        </div>
+                                        <div class="userInfo">
+                                            <div class="name">${names[i]}</div>
+                                            <div class="lastMassage">
+                                                <i class='bx bx-check-double'></i>
+                                                <p>Hello</p>
+                                                <!-- <i class='bx bx-check'></i> -->
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <div class="timeInfo">
+                                        <div class="time">امس</div>
+                                        <div class="settings"><i class='bx bx-chevron-down'></i></div>
+                                    </div>            
+                                </div>
+                            `
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="mainChat mainChatOpen">
+            <header class="mainChatHeader mainChatHeaderOpen">
+                <div class="icons IconsChat">
+                    <i class='bx bx-dots-vertical-rounded'></i>
+                    <i class='bx bx-search' ></i>
+                    <i class='bx bx-camera-home' ></i>
+                </div>
+                <div class="frindInfo">
+                    <div class="frindAccount">
+                        <div class="Info">
+                            <div class="name">youssef mohamed</div>
+                            <div class="imgs imgsOpen">
+                                <img src="images/profile.jpg">
+                                <i class='bx bx-right-arrow-alt back backOpen'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="chat">
+                <div class="send row">
+                    <p class="incomingText">Hello</p>
+                    <p class="time">16:12م</p>
+                </div>
+                <div class="recive row">
+                    <p class="outgoingText">Hello</p>
+                    <p class="time">16:12م</p>
+                    <i class='bx bx-check-double true'></i>
+                </div>
+            </div>
+            <div class="EnterText EnterTextOpen">
+                <i class='bx bx-happy-alt' ></i>
+                <i class='bx bx-plus' ></i>
+                <input type="text" onkeydown="show()" class="data" placeholder="اكتب رسالة" required>
+                <i class='bx bxs-microphone' id="send"></i>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
